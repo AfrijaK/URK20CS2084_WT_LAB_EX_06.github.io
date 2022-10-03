@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WT_EX_06_04</title>
+    </head>
+    <body>
+        <h1>Move The Logo</h1>
+        <button type="button" onclick="moveRight()">Move Right</button>
+        <button type="button" onclick="stop()">Stop</button>
+
+        <img id="img" src="C:\Users\LENOVO\Documents\E-Cell Karunya\Logo\E-CELL LOGO WHITE with bg.png" width="150px" height="150px">
+
+        <script>
+            function init()
+            {
+                imgObj = document.getElementById('img');
+                imgObj.style.position = 'relative';
+                imgObj.style.left = '0px';
+            }
+
+            function moveRight()
+            {
+                
+                imgObj.style.left = parseInt(imgObj.style.left)+1+'px';
+                animate = setTimeout('moveRight()',10);
+            }
+
+            function stop()
+            {
+                clearTimeout(animate);
+                imgObj.style.left = '0px'
+            }
+
+            window.onload = init()
+        </script>
+        <br><br>
+        <a href="WT_EX_06_03.html">Previous question!</a>
+        <br><br>
+        <a href="WT_EX_06_05.html">Next question!</a>
+    </body>
+</html>
